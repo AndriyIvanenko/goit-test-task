@@ -4,7 +4,8 @@ This app implements the rendering of the list of user cards with follow view:
 
 ![user card](./assets/usercard.png)
 
-Card styles can be easily changed by using a theme provider.
+Every user card has an interactive featire when you hover the user avatar. Card
+styles can be easily changed by using a theme provider.
 
 The main component `UserList` accepts only one prop, which is an array of
 objects of the following format:
