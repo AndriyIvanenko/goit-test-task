@@ -1,16 +1,16 @@
+import { ThemeProvider } from 'styled-components';
+import { theme } from 'services/theme';
+
+import { Div } from './App.styled';
+import users from 'db/users.json';
+import { UsersList } from './UsersList/UsersList';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <ThemeProvider theme={theme}>
+      <Div>
+        <UsersList users={users} />
+      </Div>
+    </ThemeProvider>
   );
 };

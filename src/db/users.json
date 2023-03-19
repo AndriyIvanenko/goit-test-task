@@ -1,0 +1,44 @@
+[
+  {
+    "id": "user-1",
+    "user": "Elon Musk",
+    "tweets": 777,
+    "followers": 100500,
+    "avatar": "https://i.ibb.co/mN5WsQQ/elon.png"
+  },
+  {
+    "id": "user-2",
+    "user": "Bill Gates",
+    "tweets": 888,
+    "followers": 10500,
+    "avatar": "https://i.ibb.co/P59B59F/bill.png"
+  },
+  {
+    "id": "user-3",
+    "user": "Steve Jobs",
+    "tweets": 999,
+    "followers": 1005000,
+    "avatar": "https://i.ibb.co/68jL5Km/steve.png"
+  },
+  {
+    "id": "user-4",
+    "user": "Mark Zuckerberg",
+    "tweets": 666,
+    "followers": 1050050,
+    "avatar": "https://i.ibb.co/QngSGSb/mark.png"
+  },
+  {
+    "id": "user-5",
+    "user": "Jeff Bezos",
+    "tweets": 555,
+    "followers": 10050,
+    "avatar": "https://i.ibb.co/MC8CtJ6/jeff.png"
+  },
+  {
+    "id": "user-6",
+    "user": "Jack Ma",
+    "tweets": 444,
+    "followers": 200600,
+    "avatar": "https://i.ibb.co/r6DJQXB/jack.png"
+  }
+]
