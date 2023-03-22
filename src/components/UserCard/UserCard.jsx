@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react';
 import {
   Avatar,
   AvatarContainer,
-  BackgroundImage,
+  AvatarWrapper,
   Button,
   CardContainer,
-  CentralBar,
   Logo,
   Text,
   UserName,
@@ -51,25 +50,19 @@ export const UserCard = ({ user }) => {
         alt="logo"
         width={76}
       />
-      <BackgroundImage
-        src={require('assets/images/picture.png')}
-        srcSet={`
-          ${require('assets/images/picture@2x.png')} 2x,
-          ${require('assets/images/picture@3x.png')} 3x
-        `}
-        alt="background image"
-        width={308}
-      />
-      <CentralBar>
-        <AvatarContainer>
+
+      <AvatarContainer>
+        <AvatarWrapper>
           <Avatar src={user.avatar} alt={user.user} width={62} />
           <UserName>{user.user}</UserName>
-        </AvatarContainer>
-      </CentralBar>
+        </AvatarWrapper>
+      </AvatarContainer>
+
       <Text>{user.tweets} Tweets</Text>
       <Text style={{ marginBottom: '40px' }}>
         {formatedFollowers} Followers
       </Text>
+
       <Button
         type="button"
         onClick={onBtnCliick}

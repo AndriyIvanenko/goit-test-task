@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import bgrImg from '../../assets/images/picture.png';
+import bgrImg2x from '../../assets/images/picture@2x.png';
+import bgrImg3x from '../../assets/images/picture@3x.png';
 
 export const CardContainer = styled.div`
   position: relative;
@@ -14,43 +17,32 @@ export const CardContainer = styled.div`
   padding: 20px;
 
   border-radius: 20px;
-  background: linear-gradient(
-    114.99deg,
-    #471ca9 -0.99%,
-    #5736a3 54.28%,
-    #4b2a99 78.99%
-  );
+  background-image: image-set(
+      url(${bgrImg}) 1x,
+      url(${bgrImg2x}) 2x,
+      url(${bgrImg3x}) 3x
+    ),
+    linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
+  background-repeat: no-repeat;
+  background-position: 36px 28px, 0 0;
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
 `;
 
 export const Logo = styled.img`
   align-self: flex-start;
-  margin-bottom: 172px;
-`;
 
-export const BackgroundImage = styled.img`
-  position: absolute;
-  top: 28px;
-`;
-
-export const CentralBar = styled.div`
-  position: relative;
-
-  width: calc(100% + 40px);
-  height: 8px;
-  background: ${p => p.theme.colors.background};
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
-    inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
-
-  margin-bottom: 62px;
+  margin-bottom: 242px;
 `;
 
 export const AvatarContainer = styled.div`
   position: absolute;
-  top: 50%;
+  z-index: 1;
+  top: calc(50% - 12px);
   left: 50%;
   transform: translate(-50%, -50%);
+`;
 
+export const AvatarWrapper = styled.div`
   width: 80px;
   height: 80px;
 
@@ -73,6 +65,19 @@ export const AvatarContainer = styled.div`
     width: 200px;
     height: 200px;
   }
+
+  ::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+
+    width: 380px;
+    height: 8px;
+    background: ${p => p.theme.colors.background};
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+      inset 0px -1.71846px 3.43693px #ae7be3,
+      inset 0px 3.43693px 2.5777px #fbf8ff;
+  }
 `;
 
 export const Avatar = styled.img`
@@ -85,7 +90,7 @@ export const Avatar = styled.img`
 export const UserName = styled.span`
   display: none;
   position: absolute;
-  bottom: 25px;
+  bottom: 50px;
   max-width: 60px;
   text-align: center;
 
@@ -131,5 +136,7 @@ export const Button = styled.button`
 
   :hover {
     cursor: pointer;
+    outline: 2px solid ${p => p.theme.colors.btnText};
+    text-shadow: 1px 1px 1px ${p => p.theme.colors.avatarBgrd};
   }
 `;
